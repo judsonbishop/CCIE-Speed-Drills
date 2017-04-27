@@ -1,0 +1,2 @@
+Configure a DHCP server that assigns only the addresses in the range 
+172.16.22.50 through 172.16.22.100.  Set 172.16.22.1 as the default router.

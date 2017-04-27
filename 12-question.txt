@@ -1,0 +1,1 @@
+In EIGRP 100 authenticate your neighbor out the s1/2 interface using password CISCO.

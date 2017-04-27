@@ -1,0 +1,17 @@
+class-map TELNET
+match protocol telnet
+
+class-map TFTP
+match protocol tftp
+
+policy-map PROTO
+class TELNET 
+police 10m 5000 conform-action transmit exceed-action drop
+class TFTP
+police 8m 4000 conform-action transmit exceed-action drop
+
+int fa0/0
+service-policy out PROTO
+
+do sh policy-map int fa0/0
+

@@ -1,0 +1,8 @@
+ip prefix-list LEAK permit 2.2.5.0/24
+
+route-map LEAK
+match ip add prefix-list LEAK
+
+int s1/1
+ip summary-address eigrp 100 2.2.4.0 255.255.252.0 leak-map LEAK
+

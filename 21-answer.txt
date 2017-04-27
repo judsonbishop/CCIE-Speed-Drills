@@ -1,0 +1,18 @@
+! R1
+username R2 password 0 AUTH
+
+int s1/1
+ip add 10.0.0.1 255.255.255.0
+encap ppp
+ppp encrypt mppe 40 required
+ppp chap password 0 AUTH
+ppp authent ms-chap
+
+! R2
+unsername R1 password 0 AUTH
+
+int s1/1
+ip add 10.0.0.2 255.255.255.0
+encap ppp
+ppp encrypt mppe 40 required
+ppp authent ms-chap

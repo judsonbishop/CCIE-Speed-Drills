@@ -1,0 +1,24 @@
+! PE1
+ip vrf BLUE
+rd 3:3
+route-target both 3:3
+
+int e1/2
+ip vrf forwarding BLUE
+ip add 10.1.5.1 255.255.255.0
+no shut
+
+router bgp 100
+no bgp default ipv4-unicast
+neighbor 2.2.2.2 remote-as 100
+neighbor 2.2.2.2 update-source lo0
+
+address-family vpnv4
+neighbor 2.2.2.2 activate
+neighbor 2.2.2.2 send-community extended
+
+address-family ipv4 vrf BLUE
+neighbor 10.1.5.2 remote 200
+neighbor 10.1.5.2 as-override
+
+

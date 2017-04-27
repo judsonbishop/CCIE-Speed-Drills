@@ -1,0 +1,3 @@
+Configure OSPF MD5 authentication with the password AUTH toward router 
+10.0.0.1 out the fa0/2 interface that is assigned IP address 10.0.0.2.
+

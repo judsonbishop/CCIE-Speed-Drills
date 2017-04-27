@@ -1,0 +1,53 @@
+!R1 
+username RIGHT password 0 cisco
+
+int multilink 12
+ip add 10.0.0.2 255.255.255.0
+ppp authen chap
+ppp chap hostname LEFT
+ppp chap password 0 cisco
+ppp multilink 
+ppp multilink group 12
+
+int s1/1
+no ip add
+encap ppp
+ppp multilink
+ppp multilink group 12
+no shut
+
+int s1/2
+no ip add 
+encap ppp 
+ppp multilink 
+ppp multilink group 12
+no shut
+
+!R2 
+username LEFT password 0 cisco
+
+int multilink 12
+ip add 10.0.0.2 255.255.255.0
+ppp authen chap
+ppp chap hostname RIGHTT
+ppp chap password 0 cisco
+ppp multilink 
+ppp multilink group 12
+
+int s1/1
+no ip add
+encap ppp
+ppp multilink
+ppp multilink group 12
+no shut
+
+int s1/2
+no ip add 
+encap ppp 
+ppp multilink 
+ppp multilink group 12
+no shut
+
+do sh ppp all
+do debug ppp auth
+

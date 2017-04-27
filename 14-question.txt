@@ -1,0 +1,5 @@
+Configure R1 as the hub and R2 as the spoke in a DMVPN Phase 2 configuration.
+The source for each tunnel will be e0/0 with address 172.16.23.R/24 and the 
+DMVPN network addresses will be 10.1.23.R/24.  Map multicast for the DMVPN
+network.
+

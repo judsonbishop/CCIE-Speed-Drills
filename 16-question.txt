@@ -1,0 +1,2 @@
+Configure a virtual-link to router 10.0.0.1 across area 10 with a password of
+PASSWORD.

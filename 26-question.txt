@@ -1,0 +1,4 @@
+Configure HTTP, FTP and ICMP to be policed to 10Mbps weekdays from 8:00am to 5:00pm.
+Traffic exceeding the threshold should be dropped.
+
+

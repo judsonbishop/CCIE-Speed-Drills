@@ -1,0 +1,13 @@
+In RIP you have the following subnets.  Filter out the even numbers in the third
+octet from your neighbor on the s1/2 interface.
+      2.0.0.0/24 is subnetted, 10 subnets
+R        2.2.0.0 [120/1] via 12.1.1.2, 00:00:04, Serial1/2
+R        2.2.1.0 [120/1] via 12.1.1.2, 00:00:04, Serial1/2
+R        2.2.2.0 [120/1] via 12.1.1.2, 00:00:04, Serial1/2
+R        2.2.3.0 [120/1] via 12.1.1.2, 00:00:04, Serial1/2
+R        2.2.4.0 [120/1] via 12.1.1.2, 00:00:04, Serial1/2
+R        2.2.5.0 [120/1] via 12.1.1.2, 00:00:04, Serial1/2
+R        2.2.6.0 [120/1] via 12.1.1.2, 00:00:04, Serial1/2
+R        2.2.7.0 [120/1] via 12.1.1.2, 00:00:04, Serial1/2
+R        2.2.8.0 [120/1] via 12.1.1.2, 00:00:04, Serial1/2
+R        2.2.9.0 [120/1] via 12.1.1.2, 00:00:04, Serial1/2

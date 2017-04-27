@@ -1,0 +1,2 @@
+Configure MS-CHAP 40-bit encryption between R1 and R2 out the S1/1 interface.
+The password is AUTH and the IP address for each router is 10.0.0.X/24.

@@ -1,0 +1,17 @@
+! R1
+int tun 123
+ip add 10.1.23.1 255.255.255.0
+tun so e0/0
+tun mode gre multi
+tun key 123
+ip nhrp network-id 123
+
+! R2
+int tun123
+ip add 10.1.23.2 255.255.255.0
+tun so e0/0
+tun dest 172.16.23.1
+tun key 123 
+ip nhrp network-id 123
+ip nhrp nhs 10.1.23.1
+ip nhrp map 10.1.23.1 172.16.23.1

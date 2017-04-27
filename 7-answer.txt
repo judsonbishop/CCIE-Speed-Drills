@@ -1,0 +1,9 @@
+key chain R23
+key 2
+key-string 0 cisco23
+
+int fa0/1
+ip rip authent mode md5
+ip rip authent key-chain R23
+
+sh ip proto | sec rip

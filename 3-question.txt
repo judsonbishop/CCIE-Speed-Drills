@@ -1,0 +1,5 @@
+Configure PE1 with VRF RED in classic style. The route target should be 2:2 
+and the route distinguisher should be 2:2.  Interface e1/0 should be in VRF
+RED with ip add 10.1.1.1/24.  Configure OSPF 200 in VRF RED and MP-BGP in AS
+100.  Peer MP-BGP with neighbor 2.2.2.2/32 using the loopback 0 interface.
+Redistribute between OSPF and MP-BGP. 

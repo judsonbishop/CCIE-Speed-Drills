@@ -1,0 +1,2 @@
+Create a local policy route-map to set the next-hop of last resort to 172.16.1.1.
+

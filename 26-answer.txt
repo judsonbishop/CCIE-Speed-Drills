@@ -1,0 +1,21 @@
+time-range weekdays
+periodic weekdays 8:00 to 17:00
+
+access-list 100 permit tcp any any eq www time-range weekdays
+access-list 100 permit icmp any any time-range weekdays
+access-list 100 permit tcp any any eq 20 time-range weekdays
+access-list 100 permit tcp any any eq 21 time-range weekdays
+
+class-map QOS
+match access-group 100
+
+policy-map PROTOCOLS
+class QOS
+police 10m conform transmit exceed drop
+
+int fa0/0
+service-policy out PROTOCOLS
+
+do sh policy-map int fa0/0
+
+

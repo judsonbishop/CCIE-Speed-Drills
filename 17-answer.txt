@@ -1,0 +1,8 @@
+ip dhcp excluded-address 172.16.22.1 172.16.22.49
+ip dhcp excluded-address 172.16.22.101 172.16.22.255
+
+ip dhcp pool MYPOOL
+network 172.16.22.0 255.255.255.0
+default-router 172.16.22.1
+
+

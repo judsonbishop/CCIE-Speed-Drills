@@ -1,0 +1,24 @@
+bridge irb
+
+bridge 1 protocol ieee
+bridge 1 route ip
+
+int e0/1
+no ip add
+no shut
+
+int e0/1.10
+encap do 10
+bridge-group 1
+
+int e0/1.20
+encap do 20
+brdige-group 1
+
+int BVI1
+ip add 10.0.0.1 255.255.255.0
+
+do sh bridge
+
+do sh span
+

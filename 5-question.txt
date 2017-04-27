@@ -1,0 +1,6 @@
+Configure PE1 with VRF BLUE in classic style. The route target should be 3:3 
+in and out and the route distinguisher should be 3:3.  Interface e1/2 should 
+be in VRF BLUE with ip add 10.1.5.1/24.  Configure BGP 100 in VRF BLUE peering with 
+10.1.5.2/24 that is in AS 200 and MP-BGP in AS 100.  Peer MP-BGP with neighbor 
+2.2.2.2/32 using the loopback 0 interface.  Redistributed routes will be
+seen by the CE. 

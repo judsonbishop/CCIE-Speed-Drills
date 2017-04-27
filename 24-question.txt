@@ -1,0 +1,1 @@
+Configure a policer on F0/0 that rate limits HTTP and FTP to 10 Mbps outbound.

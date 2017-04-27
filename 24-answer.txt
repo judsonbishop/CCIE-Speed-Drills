@@ -1,0 +1,14 @@
+class-map match-any QOS
+match protocol http
+match protocol ftp
+
+policy-map QOS
+class QOS
+police 10m conform-action transmit exceed-action drop
+
+int fa0/0
+service-policy out QOS
+
+do sh policy-map int fa0/0
+
+

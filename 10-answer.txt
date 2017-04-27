@@ -1,0 +1,7 @@
+access-list 2 deny   2.2.1.0 0.0.254.0
+access-list 2 permit any
+
+router rip
+distribute-list 2 in s1/2
+
+

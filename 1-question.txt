@@ -1,0 +1,4 @@
+Bundle two serial interface S1/1 and S1/2  between R1 and R2 into multilink PPP
+(MLPPP) using the Mulilink12 interface.  The routers should authenticate each 
+other using CHAP as LEFT and RIGHT respectively with the password cisco.  The
+ip address should be 10.0.0.X/24 where X is the router number.

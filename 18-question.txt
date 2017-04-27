@@ -1,0 +1,5 @@
+Using IRB to bridge to VLANs, configure e0/1.10 and e0/1.20 to talk to
+each, regardless them being on different VLANs.  The IP address that 
+spans both VLANs is 10.0.0.1/24.
+
+

@@ -1,0 +1,7 @@
+ip local policy route-map DEFAULT
+
+route-map DEFAULT permit 10
+set ip desfault next-hop 172.16.1.1
+
+sh ip local policy
+

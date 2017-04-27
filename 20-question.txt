@@ -1,0 +1,8 @@
+Configure gateway redundancy for VLAN 12 on interface fa0/1.12 between R1 and R2.
+The redundant addresses should be 12.0.0.1 and 12.0.0.2 within the single
+redundancy group 12.  Use ip address 12.0.0.XX as the primary address for the 
+interface.  Use the protocol that uses multicast group 224.0.0.18
+for information exchange.  Make R1 the preferred gateway address and use
+the authentication string AUTH.  The routers should wait 10 seconds before 
+assuming master status and use an advertising interval of 2 that is set on
+router R1.

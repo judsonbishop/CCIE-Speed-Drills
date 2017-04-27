@@ -1,0 +1,25 @@
+! PE1
+ip vrf RED
+rd 1:1
+route-target both 1:1
+
+int e1/0
+ip vrf forwarding RED 
+ip add 10.1.1.1 255.255.255.0
+no shut
+
+router ospf 200 vrf RED
+network 10.1.1.1 0.0.0.255 a 0
+redistribute bgp 100 subnets
+
+router bgp 100
+no bgp default ipv4-unicast
+neighbor 2.2.2.2 remote-as 100
+neighbor 2.2.2.2 update-source lo0
+
+address-family vpnv4
+neighbor 2.2.2.2 activate
+neighbor 2.2.2.2 send-community extended
+
+address-family ipv4 vrf RED
+redistribute ospf 200 vrf RED

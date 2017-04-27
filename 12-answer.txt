@@ -1,0 +1,8 @@
+key chain AUTH
+key 1
+key string CISCO
+
+int s1/2
+ip authent mode eigrp 100 md5
+ip authent key-chain eigrp 100 AUTH
+

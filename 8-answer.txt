@@ -1,0 +1,8 @@
+ip prefix-list NET1 permit 1.0.0.0/8
+
+route-map NET1 permit 10
+match ip add prefix-list NET1
+
+router rip 
+default-information originate route-map NET1
+

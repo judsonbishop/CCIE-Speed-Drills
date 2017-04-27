@@ -1,0 +1,15 @@
+! Define authentication
+aaa new-model
+aaa authentication dot1x default group radius
+
+! Define the radius server
+radius-server host 172.16.1.1
+radius server key CCIE
+
+! Enable Dot1X system wide
+dot1x system-auth-control
+
+! Verification
+sh dot1x
+
+

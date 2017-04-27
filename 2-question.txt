@@ -1,0 +1,10 @@
+Configure an IPsec ISAKMP policy with the following specifications.
+pre-shared key cisco
+encryption aes
+IPsec transform name TRANSFORMER
+IPsec transform algorithm esp-aes esp-sha-hmac
+IPsec mode tunnel
+IPsec profile name PROFILE
+
+Apply this policy to interface Tunnel 100.
+

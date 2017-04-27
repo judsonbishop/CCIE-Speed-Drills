@@ -1,0 +1,9 @@
+key chain AUTH
+key 1
+key-string 0 cisco
+
+int fa0/0
+ip rip authent mode text
+ip rip authent key-chain AUTH
+
+

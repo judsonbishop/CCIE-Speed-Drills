@@ -1,0 +1,22 @@
+! R1
+int fa0/1.12
+encap do 12
+ip add 10.0.0.11 255.255.255.0
+vrrp 12 ip add 12.0.0.1
+vrrp 12 ip add 12.0.0.2 secondary
+vrrp 12 timers advertise 2
+vrrp 12 preempt delay minimum 10
+vrrp priority 200
+vrrp authentication AUTH
+
+! R2
+int fa0/1.12
+end do 12
+ip add 10.0.0.22 255.255.255.0
+vrrp 12 ip add 12.0.0.1
+vrrp 12 ip add 12.0.0.2 secondary
+vrrp 12 timers learn
+vrrp 12 preempt delay minimum 10
+vrrp 12 authentication AUTH
+
+

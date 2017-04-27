@@ -1,0 +1,17 @@
+crypto isakmp policy 1
+enc aes 
+auth pre-share
+
+crypto isakmp key CISCO address 0.0.0.0
+
+crypto isakmp transform-set TRANSFORMER esp-eas esp-sha-hmac
+mode tunnel
+
+crypto ipsec profile PROFILE
+set transform-set TRANSFORMER
+
+int tun100
+tun protection ipsec profile PROFILE
+ip mtu 1400
+
+do sh crypto ipsec sa

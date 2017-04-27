@@ -1,0 +1,5 @@
+Configure outgoing telent traffic to be limited to 10Mbps with 5000bps of burst.
+Configure outgoing tftp traffic to be limited to 8Mbps with 4000bps of burst.
+Apply this solution on interface Fa0/0.
+
+
